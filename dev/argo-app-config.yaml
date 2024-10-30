@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: argo-app
+  name: argo-app-deployment
   namespace: argo
 spec:
   selector:

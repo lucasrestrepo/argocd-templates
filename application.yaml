@@ -1,8 +1,8 @@
-apiVersion: argoproj.io/v1beta1
+apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: argo-app-prject
-  namespace: argo
+  namespace: argocd
 spec:
   project: default
   source:
@@ -10,4 +10,13 @@ spec:
     targetRevision: HEAD
     path: /
   destination:
-    server: 'https://kubernetes.default.svc'  
+    server: 'https://kubernetes.default.svc'
+    namespace: argo
+
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
+
+    automated:
+      prune: true
+      selfHeal: true    

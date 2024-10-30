@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/your-org/my-git-repo'
+    repoURL: https://github.com/lucasrestrepo/argocd-templates.git
     targetRevision: main
     path: nodered
   destination:

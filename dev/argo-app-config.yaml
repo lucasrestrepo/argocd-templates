@@ -4,6 +4,7 @@ metadata:
   name: argo-app-deployment
   namespace: argo
 spec:
+  replicas: 4
   selector:
     matchLabels:
       app: argo-app
